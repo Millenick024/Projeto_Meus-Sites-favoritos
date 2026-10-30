@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Permite exibir corretamente acentos e caracteres especiais. -->
+    <meta charset="UTF-8">
+
+    <!-- Adapta a página ao tamanho da tela. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da aba do navegador. -->
+    <title>Meus sites favoritos</title>
+
+    <style>
+        /* Inclui bordas e espaçamento interno na largura dos elementos. */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f5f3ee;
+            color: #202c3d;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        header, main, footer {
+            width: min(1160px, 90%);
+            margin: auto;
+        }
+
+        .barra {
+            display: flex;
+            justify-content: space-between;
+            padding: 19px 0;
+            border-bottom: 1px solid #c7cbd0;
+            font-size: 13px;
+        }
+
+        .selo {
+            color: #36564d;
+            font-weight: bold;
+        }
+
+        .abertura {
+            padding: 25px 0 23px;
+        }
+
+        .abertura h1 {
+            font-size: clamp(26px, 3vw, 39px);
+            letter-spacing: -1px;
+            margin: 0 0 8px;
+        }
+
+        .abertura p {
+            margin: 0;
+            max-width: 720px;
+            color: #526071;
+        }
+
+        /* Organiza os sites lado a lado e permite quebrar a linha. */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-bottom: 25px;
+        }
+
+        .site {
+            flex: 0 1 calc((100% - 40px) / 3);
+            min-width: 0;
+            border-top: 3px solid #49645c;
+            padding-top: 9px;
+        }
+
+        .site h1 {
+            margin: 0 0 8px;
+            font-size: 21px;
+        }
+
+        /* Mantém a proporção das imagens. */
+        .site img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+        }
+
+        .site p {
+            color: #526071;
+            font-size: 13px;
+            margin: 9px 0;
+        }
+
+        .link-site {
+            display: inline-block;
+            color: #254d75;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 8px;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: #843b27;
+        }
+
+        /* Destaca os links durante a navegação pelo teclado. */
+        a:focus-visible {
+            outline: 3px solid #9d5a36;
+            outline-offset: 4px;
+        }
+
+        footer {
+            border-top: 1px solid #c7cbd0;
+            padding: 15px 0;
+            color: #526071;
+            font-size: 12px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Em telas menores, apresenta duas colunas. */
+        @media (max-width: 760px) {
+            .site {
+                flex-basis: calc((100% - 20px) / 2);
+            }
+        }
+
+        /* No celular, apresenta uma coluna. */
+        @media (max-width: 480px) {
+            .site {
+                flex-basis: 100%;
+            }
+
+            .barra {
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="barra">
+            <span class="selo">MEU ESPAÇO NA WEB</span>
+            <span>Agenda 12 · Desenvolvimento de Sistemas I</span>
+        </div>
+
+        <div class="abertura">
+            <!-- Título principal com o nome da autora. -->
+            <h1>Meus sites favoritos: Millena Silva</h1>
+
+            <p>
+                Uma seleção para estudar, criar e aproveitar o tempo livre.
+                Clique na imagem ou no link para explorar cada site.
+            </p>
+        </div>
+    </header>
+
+    <!-- Cada site possui nome acima da imagem e link abaixo. -->
+    <main>
+        <!-- Primeiro site: GitHub. -->
+        <article class="site">
+            <h1>GitHub</h1>
+
+            <!-- A imagem local também funciona como link. -->
+            <a href="https://github.com/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="github.png"
+                     alt="Ilustração temática do GitHub: código e projetos."
+                     width="900" height="360">
+            </a>
+
+            <a class="link-site" href="https://github.com/"
+               target="_blank" rel="noopener noreferrer">
+                Acessar GitHub ↗
+            </a>
+
+            <p>
+                Um espaço para guardar meus projetos, acompanhar alterações
+                e compartilhar o que aprendo em programação.
+            </p>
+        </article>
+
+        <!-- Segundo site: Khan Academy. -->
+        <article class="site">
+            <h1>Khan Academy</h1>
+
+            <a href="https://pt.khanacademy.org/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="khan.png"
+                     alt="Ilustração temática da Khan Academy: aprender e praticar."
+                     width="900" height="360">
+            </a>
+
+            <a class="link-site" href="https://pt.khanacademy.org/"
+               target="_blank" rel="noopener noreferrer">
+                Acessar Khan Academy ↗
+            </a>
+
+            <p>
+                Exercícios e explicações para reforçar os estudos
+                de matemática e aprender no meu ritmo.
+            </p>
+        </article>
+
+        <!-- Terceiro site: YouTube. -->
+        <article class="site">
+            <h1>YouTube</h1>
+
+            <a href="https://www.youtube.com/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="youtube.png"
+                     alt="Ilustração temática do YouTube: vídeos e descobertas."
+                     width="900" height="360">
+            </a>
+
+            <a class="link-site" href="https://www.youtube.com/"
+               target="_blank" rel="noopener noreferrer">
+                Acessar YouTube ↗
+            </a>
+
+            <p>
+                Videoaulas, tutoriais e conteúdos de entretenimento
+                para aprender e fazer uma pausa na rotina.
+            </p>
+        </article>
+
+        <!-- Quarto site: Spotify. -->
+        <article class="site">
+            <h1>Spotify</h1>
+
+            <a href="https://open.spotify.com/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="spotify.png"
+                     alt="Ilustração temática do Spotify: música e podcasts."
+                     width="900" height="360">
+            </a>
+
+            <a class="link-site" href="https://open.spotify.com/"
+               target="_blank" rel="noopener noreferrer">
+                Acessar Spotify ↗
+            </a>
+
+            <p>
+                Músicas para acompanhar o dia e podcasts
+                para conhecer novas ideias e histórias.
+            </p>
+        </article>
+
+        <!-- Quinto site: MDN Web Docs. -->
+        <article class="site">
+            <h1>MDN Web Docs</h1>
+
+            <a href="https://developer.mozilla.org/pt-BR/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="mdn.png"
+                     alt="Ilustração temática da MDN: referência para a web."
+                     width="900" height="360">
+            </a>
+
+            <a class="link-site"
+               href="https://developer.mozilla.org/pt-BR/"
+               target="_blank" rel="noopener noreferrer">
+                Acessar MDN Web Docs ↗
+            </a>
+
+            <p>
+                Documentação e exemplos de HTML, CSS e JavaScript
+                para consultar durante meus estudos.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+            Millena Silva · Imagens temáticas criadas com apoio de IA
+            para esta atividade.
+        </p>
+        <p>
+            Os nomes dos sites pertencem aos respectivos responsáveis.
+            Esta página é um exercício educacional.
+        </p>
+    </footer>
+</body>
+</html>
